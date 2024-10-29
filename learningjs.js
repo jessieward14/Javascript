@@ -89,3 +89,49 @@ for(let x=0; x<cars.length; x++){
 
 }
 console.log(greatestnumber);
+console.log(greatestnumber/2);
+
+let carrots = cars;
+carrots = carrots.filter((e)=>{
+    return e>greatestnumber/2;
+})
+console.log(carrots);
+
+let tomatoes = carrots.reduce(getTotal,0);
+
+function getTotal(total, num){
+    return total + num;
+}
+console.log(tomatoes);
+
+numbers.forEach(myFunction);
+
+function myFunction(item, index) {
+    console.log( index + ": " + item );
+  }
+  class beans{
+    constructor(name, color, amount){
+        this.name = name;
+        this.color = color;
+        this.amount =amount;
+
+    }
+   print(){
+    console.log("This bean is a " + this.name+ ". It is " + this.color +" and has " +this.amount + " peas inside of it." ) 
+   }
+   
+  }
+
+const newbean = new beans ("Ice","Blue", 8);
+newbean.print();
+const bean = [];
+bean.push(new beans("garden","yellow",6));
+bean.push(new beans("Spring","ashy",6));
+bean.push(new beans("Winter","black",8));
+bean.push(new beans("Fall","purple",7));
+bean.push(new beans("Summer","tan",2));
+bean.push(new beans("Sunny","red",5));
+bean.push(new beans("Fresh","pink",12));
+bean.push(new beans("Organic","orange",4));
+bean.push(new beans("Local","green",10));
+bean.push(new beans("Processed","gray",1));
