@@ -43,7 +43,7 @@ strings.sort();
 console.log(strings);
 strings.push(1);
 console.log(strings);
-
+//6
 
 const numbers = [];
 numbers.push(Math.floor(Math.random()*58)+29);
@@ -56,4 +56,36 @@ numbers.push(Math.floor(Math.random()*58)+29);
 numbers.push(Math.floor(Math.random()*58)+29);
 numbers.push(Math.floor(Math.random()*58)+29);
 numbers.push(Math.floor(Math.random()*58)+29);
+
+var greastestdistance = 0;
+let term1= numbers[0];
+let term2 =numbers[2];
+for (let i = 0; i < numbers.length - 1; i++) {
+    var localdistance = Math.abs(numbers[i+1] - numbers[i]);
+ //   console.log("local", localdistance);
+  //  console.log("greateszt", greastestdistance);
+    if(localdistance > greastestdistance){
+        greastestdistance=localdistance;
+        term1 = numbers[i+1];
+        term2 = numbers[i];
+    }
+}
 console.log(numbers);
+console.log(term1);
+console.log(term2);
+console.log(greastestdistance);
+
+let cars = numbers.map(function(element){
+    return element * element;
+})
+console.log(cars);
+
+let greatestnumber = 0;
+for(let x=0; x<cars.length; x++){
+    cars[x]
+    if(cars[x]>greatestnumber){
+        greatestnumber=cars[x];
+    }
+
+}
+console.log(greatestnumber);
