@@ -125,13 +125,26 @@ function myFunction(item, index) {
 const newbean = new beans ("Ice","Blue", 8);
 newbean.print();
 const bean = [];
-bean.push(new beans("garden","yellow",6));
-bean.push(new beans("Spring","ashy",6));
-bean.push(new beans("Winter","black",8));
-bean.push(new beans("Fall","purple",7));
-bean.push(new beans("Summer","tan",2));
-bean.push(new beans("Sunny","red",5));
-bean.push(new beans("Fresh","pink",12));
-bean.push(new beans("Organic","orange",4));
-bean.push(new beans("Local","green",10));
-bean.push(new beans("Processed","gray",1));
+bean.push(("garden","yellow",6));
+bean.push(("Spring","ashy",6));
+bean.push(("Winter","black",8));
+bean.push(("Fall","purple",7));
+bean.push(("Summer","tan",2));
+bean.push(("Sunny","red",5));
+bean.push(("Fresh","pink",12));
+bean.push(("Organic","orange",4));
+bean.push(("Local","green",10));
+bean.push(("Processed","gray",1));
+bean[5].print();
+
+
+// const bean2 = new beans[
+//     {name: 'Garden', color: 'yellow', amount:3},
+//     {name: 'Fall', color: 'purple', amount:8},
+//     {name: 'Winter', color: 'blue', amount:1},
+//     {name: 'Summer', color: 'red', amount:2}
+
+// ]
+
+const filtered = bean.filter(item => item.color.length > 5);
+filtered.forEach(item => console.log(item.color));
